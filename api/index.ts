@@ -5,7 +5,10 @@ const express = require('express');
 const cors = require('cors'); 
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(cors({ origin: '*' }));  // Enable CORS 
+app.use(express.json());
+
 // const { sql } = require('@vercel/postgres');
 
 // const bodyParser = require('body-parser');
